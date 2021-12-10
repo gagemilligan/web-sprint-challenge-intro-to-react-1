@@ -2,21 +2,22 @@
 import React from "react";
 import styled from 'styled-components'
 
-const Container = styled.container`
+const Container = styled.a`
 display: flex;
-justify-content: space-around;
-
+justify-content: center;
+color: white;
+font-size: 2rem;
 `
 
-const Character = (props) => {
-    console.log(props)
+function Character(props) {
+    console.log(props);
 
-    return(
+    return (
         <Container>
-            <h2 key = {"characterArticle-" + props.character.id} >{props.character.id}</h2>
-            <p>{props.character.birth_year}</p>
+            <h2 key={"characterArticle-" + props.character.id}>{props.character.id}</h2>
+            <p>{props.character.name}</p>
         </Container>
-    )
+    );
 }
 
 export default Character

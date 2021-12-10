@@ -5,7 +5,7 @@ import Characters from './components/Characters';
 
 const App = () => {
   const newArray = []
-  const [Characters, setCharacters] = useState(newArray)
+  const [characters, setCharacters] = useState(newArray)
   useEffect(() => {
     axios.get("https://swapi.dev/api/people")
     .then((res) => {
